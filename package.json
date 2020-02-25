@@ -1,0 +1,5 @@
+{
+  "name": "ecs_app_docker",
+  "private": true,
+  "dependencies": {}
+}

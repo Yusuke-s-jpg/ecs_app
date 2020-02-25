@@ -1,0 +1,37 @@
+version: '3'
+services:
+  db:
+    build:
+      context: .
+      dockerfile: ./docker/mysql/Dockerfile
+    volumes:
+      - "./mysql/init:/docker-entrypoint-initdb.d"
+      - "./mysql/data:/var/lib/mysql"
+    ports: 
+      - "3306:3306"
+
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/rails/Dockerfile
+    command: bundle exec puma -C config/puma.rb 
+    volumes:
+      - .:/ecs_app_docker
+      - /var/tmp
+      - ./sockets:/ecs_app_docker/tmp/sockets
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    tty: true
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    volumes:
+      - ./sockets:/ecs_app_docker/tmp/sockets
+    ports:
+      - "80:80"
+    depends_on:
+      - app
