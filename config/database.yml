@@ -58,8 +58,3 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: ecs_app_docker_production
-  username: ecs_app_docker
-  password: <%= ENV['ECS_APP_DOCKER_DATABASE_PASSWORD'] %>
