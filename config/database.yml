@@ -21,7 +21,7 @@ development:
   <<: *default
   database: ecs_app_docker_development
 
-production
+production:
   <<: *default
   database: <%= ENV['DB_DATABASE'] %>
   adapter: mysql2
