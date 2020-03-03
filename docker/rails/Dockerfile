@@ -17,4 +17,5 @@ ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle install
+RUN bundle exec rake assets:precompile
 ADD . $APP_ROOT
