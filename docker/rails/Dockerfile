@@ -4,7 +4,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
     apt-get update -qq && \
     apt-get install -y build-essential \
                        libpq-dev \
-		       vim \
+		                   vim \
                        nodejs \
                        mysql-client
 
@@ -18,6 +18,3 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle install
 ADD . $APP_ROOT
-
-ENV RAILS_ENV production
-RUN bundle exec rake assets:precompile
