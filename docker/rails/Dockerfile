@@ -8,8 +8,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
                        nodejs \
                        mysql-client
 
-RUN npm install yarn -g
-
 RUN mkdir /ecs_app_docker
 ENV APP_ROOT /ecs_app_docker
 WORKDIR $APP_ROOT
@@ -19,5 +17,3 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle install
 ADD . $APP_ROOT
-
-RUN RAILS_ENV=production bundle exec rails assets:precompile
