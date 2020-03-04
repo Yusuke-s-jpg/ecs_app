@@ -15,8 +15,9 @@ WORKDIR $APP_ROOT
 ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
+RUN npm install yarn -g
+
 RUN bundle install
 ADD . $APP_ROOT
 
-RUN npm install yarn -g
-RUN RAILS_ENV=production bundle exec rake assets:precompile
+RUN RAILS_ENV=production bundle exec rails assets:precompile
