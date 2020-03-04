@@ -18,3 +18,5 @@ ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle install
 ADD . $APP_ROOT
+
+RUN if ["${RAILS_ENV}" = "production"]; then bundle exec rails assets:precompile; else export RAILS_ENV=development; fi
