@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
 
-  def index
-    @user = User.all
-  end
-
   def show
     @user = User.find(params[:id])
   end
@@ -19,7 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    espond_to do |format|
+    respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: "ようこそ「#{@user.name}」さん" }
         format.json { render :show, status: :created, location: @user }
