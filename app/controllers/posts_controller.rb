@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edi
+  def edit
     @posts = Post.find(params[:id])
   end
 
