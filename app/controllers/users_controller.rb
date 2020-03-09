@@ -12,6 +12,16 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def create
+    @user = User.new(user_params)
+
+    if @user.save
+      redirect_to users_index_path, notice: "ようこそ「#{@user.name}さん」"
+    else
+      render :new
+    end
+  end
+
   private
 
   def user_params
