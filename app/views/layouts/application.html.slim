@@ -13,7 +13,7 @@ html
 
     ul.navbar-nav.ml-auto
       - if current_user
-        li.nav-item= link_to 'タスク一覧', posts_path, class: 'nav-link'
+        li.nav-item= link_to 'マイページ', user_path(current_user), class: 'nav-link'
         li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
       - else
         li.nav-item= link_to 'アカウント作成', new_user_path, class: 'nav-link'
