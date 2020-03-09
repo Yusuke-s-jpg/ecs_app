@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @posts = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -18,7 +19,8 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit
+  def edi
+    @posts = Post.find(params[:id])
   end
 
   # POST /posts
