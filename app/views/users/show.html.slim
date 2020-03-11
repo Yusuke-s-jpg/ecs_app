@@ -1,12 +1,13 @@
-p#notice = notice
+.form
+  p#notice = notice
 
-p
-  strong 名前:
-  = @user.name
-p
-  strong メールアドレス:
-  = @user.email
+  p
+    strong 名前:
+    = @user.name
+  p
+    strong メールアドレス:
+    = @user.email
 
-=> link_to 'Edit', edit_user_path(@user)
-'|
-=< link_to 'Back', posts_path
+  => link_to 'Edit', edit_user_path(@user)
+  '|
+  =< link_to 'Back', posts_path
