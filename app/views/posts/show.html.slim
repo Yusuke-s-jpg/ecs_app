@@ -9,7 +9,7 @@
     = @post.content
   P
     strong Image:
-    = @post.image if @post.image.attached?
+    = image_tag @post.image if @post.image.attached?
 
   => link_to 'Edit', edit_post_path(@post)
   '|
