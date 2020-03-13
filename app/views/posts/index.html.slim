@@ -23,5 +23,5 @@
       p
         = post.content
       P
-        strong by:    
-        = post.user.name
+        strong by:
+        = link_to post.user.name, post.user, class: 'item-link'

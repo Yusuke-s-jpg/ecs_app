@@ -31,7 +31,7 @@ body {
 .main-nav {
   display: flex;
   justify-content: space-between;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   height: 40px;
   text-transform: uppercase;
   list-style: none;
@@ -100,7 +100,15 @@ input {
   -moz-appearance: none;
 }
 
+.big-wrapper {
+  min-height: 100%;
+}
+
+.push {
+  height: 60px;
+}
+
 footer {
-  height: 2%;
+  height: 40px;
   text-align: center;
 }
