@@ -22,3 +22,6 @@
         = link_to post.title, post, class: 'item-link'
       p
         = post.content
+      P
+        strong by:    
+        = post.user.name
