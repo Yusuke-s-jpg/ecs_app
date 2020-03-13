@@ -10,6 +10,7 @@
 .container
   - @posts.each do |post|
     .item
+      = image_tag post.image if post.image.attached?
       = post.title
       = post.content
       = link_to 'Show', post

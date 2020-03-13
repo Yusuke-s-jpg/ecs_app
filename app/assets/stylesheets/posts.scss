@@ -22,8 +22,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 200px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 10px;
   margin: 5%;
 }
@@ -32,4 +31,9 @@
   background-color: #0bd;
   color: #fff;
   padding: 10px;
+}
+
+.item img {
+  height: 85%;
+  width: 100%;
 }
