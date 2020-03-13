@@ -7,6 +7,9 @@
   p
     strong メールアドレス:
     = @user.email
+  P
+    strong プロフィール写真:
+    = image_tag @user.image if @user.image.attached?
 
   => link_to 'Edit', edit_user_path(@user)
   '|

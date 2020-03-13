@@ -1,5 +1,9 @@
 = form_with model: @user, local: true do |f|
  .form-group
+   = f.label :プロフィール写真
+   br
+   = f.file_field :image, class: 'form-control'
+ .form-group
    = f.label :name, '名前'
    br
    = f.text_field :name, class: 'form-control'
