@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, {only: [:edit]}
+  before_action :forbid_login_user, {only: [:new, :create]}
+  before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
 
   def show
     @user = User.find(params[:id])
@@ -29,7 +32,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if current_user.update(user_params)
-        format.html { redirect_to @current_user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @current_user, notice: 'ユーザーを編集しました' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
