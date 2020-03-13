@@ -7,13 +7,18 @@
     =link_to '新規登録', new_user_path, class: 'button'
     =link_to 'ログイン', login_path, class: 'button'
 
+.container-title
+  h1
+   |みんなの投稿
+
 .container
   - @posts.each do |post|
     .item
       = image_tag post.image if post.image.attached?
-      = post.title
-      = post.content
-      = link_to 'Show', post
+      h1
+        = link_to post.title, post, class: 'item-link'
+      p
+        = post.content
 br
 
 = link_to 'New Post', new_post_path
