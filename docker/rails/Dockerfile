@@ -6,7 +6,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && \
                        libpq-dev \
 		                   vim \
                        nodejs \
-                       mysql-client
+                       mysql-client \
+                       chromedriver
 
 ARG RAILS_ENV
 ENV RAILS_ENV ${RAILS_ENV}
@@ -19,6 +20,6 @@ ADD ./Gemfile $APP_ROOT/Gemfile
 ADD ./Gemfile.lock $APP_ROOT/Gemfile.lock
 
 RUN bundle install
-ADD . $APP_ROOT 
+ADD . $APP_ROOT
 
 RUN if [ "${RAILS_ENV}" = "production" ]; then bundle exec rails assets:precompile; else export RAILS_ENV=development; fi
