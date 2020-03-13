@@ -1,16 +1,20 @@
 .form
   p#notice = notice
 
+
+  P
+    strong プロフィール写真
+    br
+    = image_tag @user.image if @user.image.attached?
   p
-    strong 名前:
+    strong 名前
+    br
     = @user.name
   p
-    strong メールアドレス:
+    strong メールアドレス
+    br
     = @user.email
-  P
-    strong プロフィール写真:
-    = image_tag @user.image if @user.image.attached?
 
-  => link_to 'Edit', edit_user_path(@user)
+  => link_to '編集', edit_user_path(@user)
   '|
-  =< link_to 'Back', posts_path
+  =< link_to 'ホームへ', posts_path
