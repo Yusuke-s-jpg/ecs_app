@@ -7,6 +7,8 @@
     = @post.title
   p
     = @post.content
+  P
+    = @post.user.name
 
   => link_to '編集', edit_post_path(@post)
   '|
