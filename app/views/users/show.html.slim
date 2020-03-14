@@ -1,6 +1,4 @@
 .form
-  p#notice = notice
-
 
   P
     strong プロフィール写真
@@ -10,8 +8,8 @@
     strong 名前
     br
     = @user.name
-  - if current_user
-    - if  @user.id == current_user.id
+  - if @current_user
+    - if  @user.id == @current_user.id
       => link_to '編集', edit_user_path(@user)
 
   =< link_to 'ホームへ', tasks_path

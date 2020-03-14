@@ -28,6 +28,12 @@ body {
   font-family: "Noto Sans JP";
 }
 
+.alert {
+  background-color: #800000;
+  color: #FFF;
+  text-align: center;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
