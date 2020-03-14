@@ -20,7 +20,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: "ようこそ「#{@user.name}」さん" }
+        session[:user_id] = @user.id
+        format.html { redirect_to root_path, notice: "ようこそ「#{@user.name}」さん" }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
