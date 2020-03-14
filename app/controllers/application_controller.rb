@@ -7,19 +7,19 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
    if @current_user == nil
-    format.html { redirect_to root_path, notice: 'ログインしてください' }
+    redirect_to login_path, notice: 'ログインしてください'
    end
   end
 
   def forbid_login_user
    if @current_user
-    format.html { redirect_to root_path, notice: 'すでにログインしています' }
+    redirect_to root_path, notice: 'すでにログインしています'
    end
  end
 
  def ensure_correct_user
    if @current_user.id != params[:id].to_i
-     format.html { redirect_to root_path, notice: 'このページにはアクセスできません' }
+    redirect_to root_path, notice: 'このページにはアクセスできません'
    end
  end
 end
