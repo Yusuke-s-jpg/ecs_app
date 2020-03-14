@@ -12,9 +12,9 @@ html
     .big-wrapper
       .main-nav.wrapper
         .nav-left
-          li.nav-item= link_to 'Fitness', posts_path, class: 'nav-link'
+          li.nav-item= link_to 'Fitness', tasks_path, class: 'nav-link'
         .nav-right
-          - if current_user
+          - if @current_user
             li.nav-item= link_to "#{current_user.name}さんのページ", user_path(current_user), class: 'nav-link'
             li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
           - else

@@ -1,0 +1,15 @@
+.form
+  p#notice = notice
+
+  P
+    = image_tag @task.image if @task.image.attached?
+  h1
+    = @task.title
+  p
+    = @task.content
+  P
+    = @task.user.name
+
+  => link_to '編集', edit_post_path(@task)
+  '|
+  =< link_to 'ホームへ', tasks_path
