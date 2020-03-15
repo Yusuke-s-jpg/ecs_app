@@ -1,22 +1,29 @@
 = form_with model: @user, local: true do |f|
- .form-group
-   = f.label :プロフィール写真
-   br
-   = f.file_field :image, class: 'form-control'
- .form-group
-   = f.label :name, '名前'
-   br
-   = f.text_field :name, class: 'form-control'
- .form-group
-   = f.label :email, 'メールアドレス'
-   br
-   = f.text_field :email, class: 'form-control'
- .form-group
-   = f.label :password, 'パスワード'
-   br
-   = f.password_field :password, class: 'form-control'
- .form-group
-   = f.label :password_confirmation, 'パスワード(確認用)'
-   br
-   = f.password_field :password_confirmation, class: 'form-control'
- = f.submit '登録する', class: 'button'
+  - if @user.errors.any?
+    #error_explanation
+      h2 = "投稿できませんでした"
+      ul
+        - @user.errors.full_messages.each do |message|
+          li = message
+
+  .form-group
+    = f.label :プロフィール写真
+    br
+    = f.file_field :image, class: 'form-control'
+  .form-group
+    = f.label :name, '名前'
+    br
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :email, 'メールアドレス'
+    br
+    = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :password, 'パスワード'
+    br
+    = f.password_field :password, class: 'form-control'
+  .form-group
+    = f.label :password_confirmation, 'パスワード(確認用)'
+    br
+    = f.password_field :password_confirmation, class: 'form-control'
+  = f.submit '登録する', class: 'button'

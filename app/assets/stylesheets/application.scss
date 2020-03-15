@@ -110,6 +110,14 @@ input {
   height: 60px;
 }
 
+#error_explanation {
+  color: red;
+}
+
+#error_explanation li {
+  list-style: none;
+}
+
 footer {
   height: 40px;
   text-align: center;
