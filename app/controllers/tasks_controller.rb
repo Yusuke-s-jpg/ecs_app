@@ -31,7 +31,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Post was successfully created.' }
+        format.html { redirect_to @task, notice: '投稿しました' }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Post was successfully updated.' }
+        format.html { redirect_to @task, notice: '編集しました' }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to tasks_url, notice: '投稿を削除しました' }
       format.json { head :no_content }
     end
   end

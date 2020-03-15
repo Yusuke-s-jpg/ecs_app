@@ -1,7 +1,10 @@
-h1 Editing task
+.form
+  h1 編集
 
-== render 'form'
+  == render 'form'
 
-=> link_to 'Show', @task
-'|
-=< link_to 'Back', tasks_path
+  => link_to '投稿へ', @task
+  '|
+  => link_to '削除', @task, method: :delete, data: { confirm: "「#{@task.title}」を削除します。よろしいですか？" }
+  '|
+  =< link_to 'ホームへ', tasks_path

@@ -1,8 +1,10 @@
 .form
-  h1 ユーザー編集
+  h1 編集
 
   == render 'form'
 
-  => link_to 'Show', @user
+  => link_to 'ユーザー', @user
   '|
-  =< link_to 'Back', tasks_path
+  => link_to '削除', @user, method: :delete, data: { confirm: "「#{@user.name}」を削除します。よろしいですか？" }
+  '|
+  =< link_to 'ホームへ', tasks_path
