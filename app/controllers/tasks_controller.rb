@@ -66,12 +66,19 @@ class TasksController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_post
-      @task = Task.find(params[:id])
-    end
+  def set_post
+    @task = Task.find(params[:id])
+  end
 
     # Only allow a list of trusted parameters through.
-    def task_params
-      params.require(:task).permit(:title, :content, :image)
+  def task_params
+    params.require(:task).permit(:title, :content, :image)
+  end
+
+  def ensure_correct_user
+    @task = Task.find(params[:id])
+    if @current_user.id != @task.user_id
+     redirect_to root_url, notice: 'このページにはアクセスできません'
     end
+  end
 end

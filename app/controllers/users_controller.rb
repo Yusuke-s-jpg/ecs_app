@@ -56,4 +56,10 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
   end
+
+  def ensure_correct_user
+    if @current_user.id != params[:id].user_id.to_i
+     redirect_to root_url, notice: 'このページにはアクセスできません'
+    end
+  end
 end

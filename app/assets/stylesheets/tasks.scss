@@ -27,7 +27,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-rows:1fr 1fr;
   gap: 10px;
   margin: 4%;
 }
@@ -53,4 +54,9 @@
 
 .item h1 p{
   border-bottom: solid 2px #d3d3d3;
+}
+
+.text_area {
+  height: 100px;
+  width: 30%;
 }
