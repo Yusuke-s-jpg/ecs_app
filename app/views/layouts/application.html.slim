@@ -2,17 +2,18 @@ doctype html
 html
   head
     title
-      | EcsAppDocker
+      | FitConnect
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+    = favicon_link_tag('favicon.ico')
   body
     .big-wrapper
       .main-nav.wrapper
         .nav-left
-          li.nav-item= link_to 'Fitness', tasks_path, class: 'nav-link'
+          li.nav-item= link_to 'FitConnect', tasks_path, class: 'nav-link'
         .nav-right
           - if @current_user
             li.nav-item= link_to "#{@current_user.name}さんのページ", user_path(@current_user), class: 'nav-link'
