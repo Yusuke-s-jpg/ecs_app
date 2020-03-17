@@ -20,6 +20,10 @@
   text-align: center;
 }
 
+.content-title {
+  width: 80%;
+}
+
 .container-title h1 {
   text-align: center;
   padding-top: 10px;
@@ -27,19 +31,19 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   grid-template-rows:1fr 1fr;
   gap: 10px;
-  margin: 4%;
+  margin: 4% 8%;
 }
 
 .item {
-  padding: 10px;
+  padding: 15px;
 }
 
 .item img {
-  height: 85%;
-  width: 100%;
+  height: 260px;
+  width: 380px;
 }
 
 .form img {
@@ -52,7 +56,7 @@
   color: #000;
 }
 
-.item h1 p{
+.item p {
   border-bottom: solid 2px #d3d3d3;
 }
 
