@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    return Task.where(user_id: params[:id])
   end
 
   def new
@@ -58,7 +59,7 @@ class UsersController < ApplicationController
   end
 
   def ensure_correct_user
-    if @current_user.id != params[:id].user_id.to_i
+    if @current_user.id != params[:id].to_i
      redirect_to root_url, notice: 'このページにはアクセスできません'
     end
   end

@@ -13,3 +13,15 @@
       => link_to '編集', edit_user_path(@user)
 
   =< link_to 'ホームへ', tasks_path
+
+.container
+  - @user.tasks.each do |task|
+    .item
+      = image_tag task.image if task.image.attached?
+      h1
+        = link_to task.title, task, class: 'item-link'
+      p
+        = task.content
+      P
+        strong by:
+        = link_to task.user.name, task.user, class: 'item-link'
