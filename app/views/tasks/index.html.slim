@@ -17,8 +17,8 @@
 .container
   - @tasks.each do |task|
     .item
-      = image_tag task.image if task.image.attached?
-      h1
+      = link_to image_tag(task.image), task if task.image.attached?
+       h1
         = link_to task.title, task, class: 'item-link'
       p
         = task.content
