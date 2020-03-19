@@ -1,10 +1,10 @@
 .form
 
-  P
+  h1
     strong プロフィール写真
     br
     = image_tag @user.image if @user.image.attached?
-  p
+  h1
     strong 名前
     br
     = @user.name
@@ -17,7 +17,7 @@
 .container
   - @user.tasks.each do |task|
     .item
-      = image_tag task.image if task.image.attached?
+      = link_to image_tag(task.image), task if task.image.attached?
       h1
         = link_to task.title, task, class: 'item-link'
       p
