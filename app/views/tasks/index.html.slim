@@ -14,6 +14,10 @@
   h1
    |みんなの投稿
 
+  = search_form_for @q do |f|
+    = f.search_field :title_cont, class: 'search-field', placeholder: 'キーワードを入力'
+    = f.submit class: 'button'
+
 .container
   - @tasks.each do |task|
     .item
