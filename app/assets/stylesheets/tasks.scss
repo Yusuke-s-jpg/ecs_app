@@ -24,9 +24,9 @@
   width: 80%;
 }
 
-.container-title h1 {
+.container-title {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .container {
@@ -38,7 +38,9 @@
 }
 
 .item {
+  width: 380px;
   padding: 15px;
+  background-color: #fff;
 }
 
 .item img {
@@ -74,4 +76,8 @@
 .text_area {
   height: 100px;
   width: 30%;
+}
+
+.search-field {
+  width: 200px;
 }

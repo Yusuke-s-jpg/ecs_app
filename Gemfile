@@ -66,3 +66,4 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'rails-i18n'
 gem "aws-sdk-s3", require: false
+gem "ransack"
