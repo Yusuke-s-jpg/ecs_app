@@ -1,24 +1,26 @@
-# README
+# FitConnect
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ポートフォリオとして作成中のフィットネスSNSです
 
-Things you may want to cover:
+# URL
 
-* Ruby version
+* https://fitconnectnow.com
 
-* System dependencies
+# 使用技術
 
-* Configuration
+* Ruby 2.5.3,Rails 5.2.2
+* nginx,puma
+* Docker,docker-compose
+* AWS(VPC,ECS,RDS,ALB,S3,Route53,ACM)
+* CircleCI
+* Rspec
+* slim
 
-* Database creation
+# 機能一覧
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ユーザー管理機能(登録、ログイン、編集、削除)
+* 画像記事投稿機能、編集、削除
+* 投稿一覧、詳細表示機能
+* 検索機能
+* ページネーション機能
+* システムspec
