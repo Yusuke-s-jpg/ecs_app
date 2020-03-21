@@ -14,7 +14,6 @@
 * AWS(VPC,ECS,RDS,ALB,S3,Route53,ACM)
 * CircleCI
 * Rspec
-* slim
 
 # 機能一覧
 
