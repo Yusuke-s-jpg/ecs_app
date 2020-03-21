@@ -18,6 +18,9 @@
     = f.search_field :title_cont, class: 'search-field', placeholder: 'キーワードを入力'
     = f.submit class: 'button'
 
+  = paginate @tasks
+  = page_entries_info @tasks
+
 .container
   - @tasks.each do |task|
     .item
