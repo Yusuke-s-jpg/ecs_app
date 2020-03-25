@@ -81,3 +81,12 @@
 .search-field {
   width: 200px;
 }
+
+@media screen and (max-width:600px) {
+
+  .item img {
+    height: 208px;
+    width: 304px;
+  }
+
+}
