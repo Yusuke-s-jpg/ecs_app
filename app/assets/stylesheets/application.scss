@@ -126,8 +126,7 @@ footer {
 @media screen and (max-width:600px) {
 
 .nav-right {
-  display: none;
+  display: none !important;
 }
-
 
 }
