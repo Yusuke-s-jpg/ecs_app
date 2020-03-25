@@ -84,7 +84,17 @@
 
 @media screen and (max-width:600px) {
   .item img {
-    height: 208px;
-    width: 304px;
+    height: 195px;
+    width: 285px;
+  }
+
+  .item h1,
+  .item p {
+    width: 285px;
+  }
+
+  .item {
+    width: 285px;
+    padding: 10px;
   }
 }
