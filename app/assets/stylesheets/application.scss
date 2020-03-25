@@ -123,10 +123,8 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width:600px) {
-
-.nav-right {
-  display: none !important;
-}
-
+@media (max-width:600px) {
+  .nav-right {
+    display: none !important;
+  }
 }
