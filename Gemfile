@@ -68,3 +68,4 @@ gem 'rails-i18n'
 gem 'aws-sdk-s3', require: false
 gem 'ransack'
 gem 'kaminari'
+gem "jquery-rails"
