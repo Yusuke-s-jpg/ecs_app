@@ -16,3 +16,14 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
+$(function() {
+  $("#nav-button").click(function(){
+    if (!$("#nav-button").hasClass("nav-button-on")) {
+      $("#nav-button").addClass("nav-button-on");
+      $("#nav-menu").fadeIn();
+    } else {
+      $("#nav-button").removeClass("nav-button-on")
+      $("#nav-menu").fadeOut();
+    }
+  });
+});
