@@ -16,7 +16,7 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-$(function() {
+$(document).on('turbolinks:load', function() {
   $("#nav-button").click(function(){
     if (!$("#nav-button").hasClass("nav-button-on")) {
       $("#nav-button").addClass("nav-button-on");
