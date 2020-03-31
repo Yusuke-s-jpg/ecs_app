@@ -147,21 +147,22 @@ footer {
   .nav-button span {
     position: absolute;
     display: block;
-    width: 50px;
-    height: 5px;
+    width: 40px;
+    height: 3px;
+    top: 8px;
     background: #fff;
     border-radius: 5px;
     transition: all .3s;
   }
 
   .nav-button span:nth-of-type(2) {
-    top: 18px;
+    top: 19px;
     opacity: 1;
     transition: all .3s;
   }
 
   .nav-button span:last-of-type {
-    top: 36px;
+    top: 30px;
   }
 
   .nav-button p {
@@ -173,7 +174,7 @@ footer {
   }
 
   .nav-button-on span:first-of-type {
-    transform: rotate(-45deg) translateY(16px) translateX(-13px);
+    transform: rotate(-45deg) translateY(6px) translateX(-13px);
   }
 
   .nav-button-on span:nth-of-type(2) {
@@ -182,7 +183,7 @@ footer {
   }
 
   .nav-button-on span:last-of-type {
-    transform: rotate(45deg) translateY(-13px) translateX(-9px);
+    transform: rotate(45deg) translateY(-3px) translateX(-9px);
   }
 
   .nav-menu {
@@ -197,10 +198,10 @@ footer {
   .nav-menu li {
     list-style-type: none;
   }
-  .navi-menu li a {
+  .nav-menu li a {
     display: block;
     color: #e7efe7;
-    font-size: 20px;
+    font-size: 1.4rem;
     text-decoration: none;
     padding: 5px 30px;
   }
