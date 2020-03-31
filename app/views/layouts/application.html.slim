@@ -22,11 +22,11 @@ html
           - else
             li.nav-item= link_to '新規登録', new_user_path, class: 'nav-link'
             li.nav-item= link_to 'ログイン', login_path, class: 'nav-link'
-        .nav-button
+        .nav-button#nav-button
           span
           span
           span
-      .nav-menu
+      .nav-menu#nav-menu
         - if @current_user
           li.nav-item= link_to "#{@current_user.name}さんのページ", user_path(@current_user), class: 'nav-link'
           li.nav-item= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link'
